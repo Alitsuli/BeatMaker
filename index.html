@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css"/>
+    <title>Beatmaker</title>
+</head>
+<body>
+    <div class="sequencer">
+        <div class="clap-track">
+            <div class="controls">
+                <h1>Clap</h1>
+                <button data-track="0" class="mute clap-volume">
+                    <i class="fa-solid fa-volume-off"></i>
+                </button>
+                <select name="clap-select" id="clap-select">
+                    <option value="./beatsSound/allSounds/clap-808.wav">Clap 808</option>
+                    <option value="./beatsSound/allSounds/clap-analog.wav">Clap Analog</option>
+                    <option value="./beatsSound/allSounds/clap-crushed.wav">Clap Crushed</option>
+                    <option value="./beatsSound/allSounds/clap-fat.wav">Clap Fat</option>
+                    <option value="./beatsSound/allSounds/clap-slapper.wav">Clap Slapper</option>
+                    <option value="./beatsSound/allSounds/clap-tape.wav">Clap Tape</option>
+                </select>
+            </div>
+            <div class="clap">
+                <div class="pad clap-pad b0"></div>
+                <div class="pad clap-pad b1"></div>
+                <div class="pad clap-pad b2"></div>
+                <div class="pad clap-pad b3"></div>
+                <div class="pad clap-pad b4"></div>
+                <div class="pad clap-pad b5"></div>
+                <div class="pad clap-pad b6"></div>
+                <div class="pad clap-pad b7"></div>
+            </div>
+        </div>
+
+        <div class="crash-track">
+            <div class="controls">
+                <h1>Crash</h1>
+                <button data-track="1" class="mute crash-volume">
+                    <i class="fa-solid fa-volume-off"></i>
+                </button>
+                <select name="crash-select" id="crash-select">
+                    <option value="./beatsSound/allSounds/crash-808.wav">Crash 808</option>
+                    <option value="./beatsSound/allSounds/crash-acoustic.wav">Crash Acoustic</option>
+                    <option value="./beatsSound/allSounds/crash-noise.wav">Crash Noise</option>
+                    <option value="./beatsSound/allSounds/crash-tape.wav">Crash Tape</option>
+                </select>
+            </div>
+            <div class="crash">
+                <div class="pad crash-pad b0"></div>
+                <div class="pad crash-pad b1"></div>
+                <div class="pad crash-pad b2"></div>
+                <div class="pad crash-pad b3"></div>
+                <div class="pad crash-pad b4"></div>
+                <div class="pad crash-pad b5"></div>
+                <div class="pad crash-pad b6"></div>
+                <div class="pad crash-pad b7"></div>
+            </div>
+        </div>
+
+        <div class="hihat-track">
+            <div class="controls">
+                <h1>Hihat</h1>
+                <button data-track="2" class="mute hihat-volume">
+                    <i class="fa-solid fa-volume-off"></i>
+                </button>
+                <select name="hihat-select" id="hihat-select">
+                    <option value="./beatsSound/allSounds/hihat-808.wav">Hihat 808</option>
+                    <option value="./beatsSound/allSounds/hihat-acoustic01.wav">Hihat Acoustic 01</option>
+                    <option value="./beatsSound/allSounds/hihat-acoustic02.wav">Hihat Acoustic 02</option>
+                    <option value="./beatsSound/allSounds/hihat-analog.wav">Hihat Analog</option>
+                    <option value="./beatsSound/allSounds/hihat-digital.wav">Hihat Digital</option>
+                    <option value="./beatsSound/allSounds/hihat-dist01.wav">Hihat Dist 01</option>
+                    <option value="./beatsSound/allSounds/hihat-dist01.wav">Hihat Dist 02</option>
+                    <option value="./beatsSound/allSounds/hihat-electro.wav">Hihat Electro</option>
+                    <option value="./beatsSound/allSounds/hihat-plain.wav">Hihat Plain</option>
+                    <option value="./beatsSound/allSounds/hihat-reso.wav">Hihat Reso</option>
+                    <option value="./beatsSound/allSounds/hihat-ring.wav">Hihat Ring</option>
+                </select>
+            </div>
+            <div class="hihat">
+                <div class="pad hihat-pad b0"></div>
+                <div class="pad hihat-pad b1"></div>
+                <div class="pad hihat-pad b2"></div>
+                <div class="pad hihat-pad b3"></div>
+                <div class="pad hihat-pad b4"></div>
+                <div class="pad hihat-pad b5"></div>
+                <div class="pad hihat-pad b6"></div>
+                <div class="pad hihat-pad b7"></div>
+            </div>
+        </div>
+        
+        <!-- jäin tänne--> 
+        <div class="hihat-track">
+            <div class="controls">
+                <h1>Hihat</h1>
+                <button data-track="2" class="mute hihat-volume">
+                    <i class="fa-solid fa-volume-off"></i>
+                </button>
+                <select name="hihat-select" id="hihat-select">
+                    <option value="./beatsSound/allSounds/hihat-808.wav">Hihat 808</option>
+                    <option value="./beatsSound/allSounds/hihat-acoustic01.wav">Hihat Acoustic 01</option>
+                    <option value="./beatsSound/allSounds/hihat-acoustic02.wav">Hihat Acoustic 02</option>
+                    <option value="./beatsSound/allSounds/hihat-analog.wav">Hihat Analog</option>
+                    <option value="./beatsSound/allSounds/hihat-digital.wav">Hihat Digital</option>
+                    <option value="./beatsSound/allSounds/hihat-dist01.wav">Hihat Dist 01</option>
+                    <option value="./beatsSound/allSounds/hihat-dist01.wav">Hihat Dist 02</option>
+                    <option value="./beatsSound/allSounds/hihat-electro.wav">Hihat Electro</option>
+                    <option value="./beatsSound/allSounds/hihat-plain.wav">Hihat Plain</option>
+                    <option value="./beatsSound/allSounds/hihat-reso.wav">Hihat Reso</option>
+                    <option value="./beatsSound/allSounds/hihat-ring.wav">Hihat Ring</option>
+                </select>
+            </div>
+            <div class="hihat">
+                <div class="pad hihat-pad b0"></div>
+                <div class="pad hihat-pad b1"></div>
+                <div class="pad hihat-pad b2"></div>
+                <div class="pad hihat-pad b3"></div>
+                <div class="pad hihat-pad b4"></div>
+                <div class="pad hihat-pad b5"></div>
+                <div class="pad hihat-pad b6"></div>
+                <div class="pad hihat-pad b7"></div>
+            </div>
+        </div>
+    </div>
+    <script scr="./app.js"></script>
+</body>
+</html>
