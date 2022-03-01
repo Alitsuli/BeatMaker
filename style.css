@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+i,svg{
+    pointer-events: none;
+}
+
+.clap-pad,.crash-pad, .hihat-pad, .kick-pad{
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem 0.5rem;
+    cursor: pointer;
+}
+
+.clap-pad{
+    background: rgb(160, 211, 224);
+}
+.crash-pad{
+    background: rgb(65, 158, 47);
+}
+.hihat-pad{
+    background: rgb(212, 143, 52);
+}
+.kick-pad{
+    background: rgb(96, 95, 177);
+}
+.clap-pad.active{
+    background: rgb(8, 202, 250);
+}
+.crash-pad.active{
+    background: rgb(43, 255, 0);
+}
+.hihat-pad.active{
+    background: rgb(253, 154, 24);
+}
+.kick-pad.active{
+    background: rgb(31, 27, 253);
+}
+.sequencer{
+    display: flex;
+    min-height: 50vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.clap-track, .crash-track, .hihat-track, .kick-track{
+    display: flex;
+    align-items: center;
+    width: 70%;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+.clap,.crash,.hihat,.kick{
+    display: flex;
+}
+.controls{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    margin: 0rem 2rem;
+}
+
+.controls button{
+    padding: 1rem;
+    border: none;
+    background: rgba(113, 115, 116, 0.87);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.pad{
+    transition: all 0.5s ease;
+}
+
+.play{
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    background: rgba(113, 115, 116, 0.87);
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 3rem;
+}
+
+select{
+    padding: 1rem;
+    font-size: 1rem;
+}
