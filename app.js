@@ -8,6 +8,7 @@ class DrumKit{
         this.playBtn = document.querySelector(".play");
         this.index = 0;
         this.beatPerMinute = 150;
+        this.isPlaying = null;
     }
     active(){
         this.classList.toggle("active");
@@ -25,24 +26,24 @@ class DrumKit{
             if(bar.classList.contains("active")){
                 //check sounds
                 if(bar.classList.contains("clap-pad")){
-                    this.clapAudio.currentTime = 0;
+                    this.clapAudio.currentTime = 0;  // reset bets per minute
                     this.clapAudio.play();
-                    console.log("clap sound!");
+                    //console.log("clap sound!");
                 }
                 if(bar.classList.contains("crash-pad")){
                     this.crashAudio.currentTime = 0;
                     this.crashAudio.play();
-                    console.log("crash sound!");
+                    //console.log("crash sound!");
                 }
                 if(bar.classList.contains("hihat-pad")){
                     this.hihatAudio.currentTime = 0;
                     this.hihatAudio.play();
-                    console.log("hihat sound!");
+                    //console.log("hihat sound!");
                 }
                 if(bar.classList.contains("kick-pad")){
                     this.kickAudio.currentTime = 0;
                     this.kickAudio.play();
-                    console.log("kick sound!");
+                    //console.log("kick sound!");
                 }
             }
         });
@@ -51,9 +52,25 @@ class DrumKit{
     start() {
         //speed of track
         const interval = (60/this.beatPerMinute) * 1000;
-        setInterval(() => {
-            this.repeat();
-        }, interval);
+
+        //check is playing
+        if(!this.isPlaying){
+            this.isPlaying = setInterval(() => {
+                this.repeat();
+            }, interval);
+        }else{
+            clearInterval(this.isPlaying);
+            this.isPlaying = null;
+        }
+    }
+    updateBtn (){
+        if(this.isPlaying){
+            this.playBtn.innerText = "Stop";
+            this.playBtn.classList.add("active");
+        }else{
+            this.playBtn.innerText = "Play";
+            this.playBtn.classList.remove("active");
+        }
     }
 }
 
@@ -67,4 +84,5 @@ drumkit.pads.forEach(pad =>{
 });
 drumkit.playBtn.addEventListener("click", function () {
     drumkit.start();
+    drumkit.updateBtn();
 });
