@@ -1,7 +1,7 @@
 class DrumKit{
     constructor (){
         this.pads = document.querySelectorAll(".pad"); 
-        this.clapAudio = document.querySelector("clap-sound");
+        this.clapAudio = document.querySelector(".clap-sound");
         this.crashAudio = document.querySelector(".crash-sound");
         this.hihatAudio = document.querySelector(".hihat-sound");
         this.kickAudio = document.querySelector(".kick-sound");
@@ -24,21 +24,25 @@ class DrumKit{
             //check if pads are active
             if(bar.classList.contains("active")){
                 //check sounds
-                if(bar.classList.contains("clap-sound")){
-                    //this.clapAudio.currentTime = 0;
+                if(bar.classList.contains("clap-pad")){
+                    this.clapAudio.currentTime = 0;
                     this.clapAudio.play();
+                    console.log("clap sound!");
                 }
-                else if(bar.classList.contains("crash-sound")){
+                if(bar.classList.contains("crash-pad")){
                     this.crashAudio.currentTime = 0;
                     this.crashAudio.play();
+                    console.log("crash sound!");
                 }
-                else if(bar.classList.contains("hihat-sound")){
+                if(bar.classList.contains("hihat-pad")){
                     this.hihatAudio.currentTime = 0;
                     this.hihatAudio.play();
+                    console.log("hihat sound!");
                 }
-                else if(bar.classList.contains("kick-sound")){
+                if(bar.classList.contains("kick-pad")){
                     this.kickAudio.currentTime = 0;
                     this.kickAudio.play();
+                    console.log("kick sound!");
                 }
             }
         });
